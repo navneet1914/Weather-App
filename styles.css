@@ -269,8 +269,7 @@
  }
  
  .moderate {
-     background: radial-gradient(circle at 50% 50%, rgba(0, 255, 53, 0.41) 0%, rgba(16, 57, 161, 0.48) 100%);
-     color: black;
+    background: linear-gradient(90deg, rgba(20, 0, 44, 1) 0%, rgba(33, 0, 71, 1) 100%, rgba(71, 2, 125, 1) 100%);
  }
  
  .hot {
