@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <div class="wrapper">
+
+        <h1>Weather APP</h1>
+         
+        <div class="tab-container">
+           <p class="tab" data-userWeather>Your Weather</p>
+           <div class="tab" data-searchWeather>Search Weather</div>  
+        </div>
+        
+        <div class="weather-container">
+            <!-- grant location container -->
+             <div class="sub-container grant-location-container">
+                <img src="./assets/location.png" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow access to get weather Information</p>
+                <button class="btn" data-grantAccess>Grant Acess</button>
+             </div>
+
+             <!-- Search Form in Search Tab  -->
+              <form class="form-container" data-searchForm>
+                <input placeholder="Search for City.." data-searchInput>
+                <button class="btn" type="submit" id="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                   </svg>
+                </button>
+              </form>
+
+              <!-- Loading Screen Container -->
+               <div class="sub-container loading-container">
+                <img  src="./assets/loading.gif" width="150" height="150">
+                <p>Loading</p>
+               </div>
+
+               <!-- Show Weather info (To be used in search wala tab as well as your weather wala tab) -->
+                <div class="sub-container user-info-container">
+                    <!-- city name and flag -->
+                    <div class="name">
+                       <p data-cityName></p>
+                       <img data-countryIcon>
+                       
+                    </div>
+
+                    <!-- weather description -->
+                    <p data-weatherDescription></p>
+ 
+                    <!-- weather Icon -->
+                    <img data-weatherIcon>
+
+                    <!-- Temp -->
+                    <p data-temp></p>
+
+                    <!-- 3cards- parameters -->
+                     <div class="parameter-container">
+
+                        <!-- card 1 -->
+                        <div class="parameter">
+                            <img src="./assets/wind.png">
+                            <p>Wind Speed</p>
+                            <p data-windSpeed></p>
+                        </div>
+                        
+                        <!-- card 2 -->
+                         <div class="parameter">
+                            <img src="./assets/humidity.png">
+                            <p>Humidity</p>
+                            <p data-humidity></p>
+                         </div>
+
+                         <!-- card 3 -->
+                          <div class="parameter">
+                            <img src="./assets/cloud.png">
+                            <p>Clouds</p>
+                            <p data-cloudiness></p>
+                          </div>
+                     </div>
+                </div>
+        </div>
+
+         <!-- handle api fetch error -->
+    <div class="sub-container api-error-container">
+      <img src="./assets/not-found.png" data-notFoundImg />
+      <p data-apiErrorText></p>
+    </div>
+
+     </div>
+    <script src="script.js"></script>
+</body>
+</html> 
