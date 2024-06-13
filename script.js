@@ -109,6 +109,7 @@ function renderWeatherInfo(weatherInfo){
     const windSpeed = document.querySelector('[data-windSpeed]');
     const humidity = document.querySelector('[data-humidity]');
     const cloudiness = document.querySelector('[data-cloudiness]');
+    const feelsLike = document.querySelector('[data-feelsLike]');
 
     //ye sb values hm json formatter me dekh k likh rhe honge--Kaise??
     // phle apne api ko google me likhe fir usme lat and lon and API key daal de
@@ -125,6 +126,8 @@ function renderWeatherInfo(weatherInfo){
     windSpeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
     humidity.innerText = `${weatherInfo?.main?.humidity}%`;
     cloudiness.innerText = `${weatherInfo?.clouds?.all}%`;
+    feelsLike.innerText = `${weatherInfo?.main?.feels_like}°C`;
+
 
     if (temperature < 20) {
         wrap.classList.add('cold');
