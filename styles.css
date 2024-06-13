@@ -273,7 +273,7 @@
  }
  
  .hot {
-     background: linear-gradient(90deg, rgba(255, 163, 0, 1) 0%, rgba(255, 59, 0, 1) 51%, rgba(255, 160, 0, 1) 100%);
+    background: linear-gradient(90deg, rgba(86, 0, 0, 1) 0%, rgba(149, 79, 0, 1) 100%, rgba(158, 79, 0, 1) 100%);
  }
 
 
